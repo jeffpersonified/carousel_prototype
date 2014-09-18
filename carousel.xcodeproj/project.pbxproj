@@ -13,6 +13,7 @@
 		1F9E1E3519CA854A00DB754F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F9E1E3419CA854A00DB754F /* Images.xcassets */; };
 		1F9E1E3819CA854A00DB754F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F9E1E3619CA854A00DB754F /* LaunchScreen.xib */; };
 		1F9E1E4419CA854A00DB754F /* carouselTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9E1E4319CA854A00DB754F /* carouselTests.swift */; };
+		1FE4FE9319CAAB7700708904 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4FE9219CAAB7700708904 /* LaunchScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		1F9E1E3D19CA854A00DB754F /* carouselTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carouselTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9E1E4219CA854A00DB754F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F9E1E4319CA854A00DB754F /* carouselTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carouselTests.swift; sourceTree = "<group>"; };
+		1FE4FE9219CAAB7700708904 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				1F9E1E3119CA854A00DB754F /* Main.storyboard */,
 				1F9E1E3419CA854A00DB754F /* Images.xcassets */,
 				1F9E1E3619CA854A00DB754F /* LaunchScreen.xib */,
+				1FE4FE9219CAAB7700708904 /* LaunchScreenViewController.swift */,
 				1F9E1E2B19CA854A00DB754F /* Supporting Files */,
 			);
 			path = carousel;
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F9E1E3019CA854A00DB754F /* ViewController.swift in Sources */,
+				1FE4FE9319CAAB7700708904 /* LaunchScreenViewController.swift in Sources */,
 				1F9E1E2E19CA854A00DB754F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +409,7 @@
 				1F9E1E4919CA854A00DB754F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F9E1E4A19CA854A00DB754F /* Build configuration list for PBXNativeTarget "carouselTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				1F9E1E4C19CA854A00DB754F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
