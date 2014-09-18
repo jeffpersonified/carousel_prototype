@@ -1,5 +1,5 @@
 //
-//  LaunchScreenViewController.swift
+//  InitialViewController.swift
 //  carousel
 //
 //  Created by Jeff Smith on 9/17/14.
@@ -8,11 +8,16 @@
 
 import UIKit
 
-class LaunchScreenViewController: UIViewController {
+class InitialViewController: UIViewController {
 
+    @IBOutlet weak var initialScrollView: UIScrollView!
+    @IBOutlet weak var introImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        initialScrollView.contentSize = CGSize(width: 320, height: 1136)
+        
         // Do any additional setup after loading the view.
     }
 
