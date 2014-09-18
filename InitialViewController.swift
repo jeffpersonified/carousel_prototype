@@ -9,14 +9,30 @@
 import UIKit
 
 class InitialViewController: UIViewController {
-
+   
     @IBOutlet weak var initialScrollView: UIScrollView!
     @IBOutlet weak var introImageView: UIImageView!
+    
+    // Tiles
+    @IBOutlet weak var lakeImageView: UIImageView!
+    @IBOutlet weak var deerImageView: UIImageView!
+    @IBOutlet weak var fishImageView: UIImageView!
+    @IBOutlet weak var cabinImageView: UIImageView!
+    @IBOutlet weak var dogImageView: UIImageView!
+    @IBOutlet weak var bunnyEarsImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initialScrollView.contentSize = CGSize(width: 320, height: 1136)
+        
+        // Transform tiles
+        bunnyEarsImageView.transform = CGAffineTransformMakeRotation(-0.20)
+        lakeImageView.transform = CGAffineTransformMakeRotation(0.25)
+        fishImageView.transform = CGAffineTransformMakeRotation(0.22)
+        cabinImageView.transform = CGAffineTransformMakeRotation(0.23)
+        deerImageView.transform = CGAffineTransformMakeRotation(-0.20)
+        dogImageView.transform = CGAffineTransformMakeRotation(-0.19)
         
         // Do any additional setup after loading the view.
     }
