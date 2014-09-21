@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361p" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361p" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mfd-Vz-pYg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -22,11 +22,11 @@
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="intro" translatesAutoresizingMaskIntoConstraints="NO" id="y02-yK-WRE">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1136"/>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="intro_tile1" translatesAutoresizingMaskIntoConstraints="NO" id="32v-VL-ZXA">
-                                        <rect key="frame" x="-25" y="408" width="153" height="152"/>
-                                    </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="intro_tile2" translatesAutoresizingMaskIntoConstraints="NO" id="ckC-YY-eNf">
                                         <rect key="frame" x="244" y="475" width="76" height="75"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="intro_tile3" translatesAutoresizingMaskIntoConstraints="NO" id="co2-E8-CFH">
+                                        <rect key="frame" x="244" y="376" width="76" height="76"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="intro_tile5" translatesAutoresizingMaskIntoConstraints="NO" id="jAG-Q3-jIU">
                                         <rect key="frame" x="-13" y="377" width="76" height="75"/>
@@ -37,14 +37,33 @@
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="intro_tile6" translatesAutoresizingMaskIntoConstraints="NO" id="gQY-g0-6Zh">
                                         <rect key="frame" x="122" y="377" width="76" height="75"/>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="intro_tile3" translatesAutoresizingMaskIntoConstraints="NO" id="co2-E8-CFH">
-                                        <rect key="frame" x="244" y="376" width="76" height="76"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="intro_tile1" translatesAutoresizingMaskIntoConstraints="NO" id="32v-VL-ZXA">
+                                        <rect key="frame" x="-24" y="437" width="153" height="152"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8K7-DZ-QWH">
+                                        <rect key="frame" x="19" y="1000" width="282" height="60"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="yVx-ke-l3d" kind="show" id="tUG-QL-clZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByW-0Q-Bnt">
+                                        <rect key="frame" x="19" y="1068" width="282" height="48"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="vz3-YD-qOB" kind="show" id="4bM-fs-izk"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="GqD-TW-2ta"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1136"/>
                     <connections>
@@ -60,6 +79,81 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="961" y="351"/>
+        </scene>
+        <!--Sign In Controller View Controller-->
+        <scene sceneID="6eB-sQ-b4K">
+            <objects>
+                <viewController id="yVx-ke-l3d" customClass="SignInControllerViewController" customModule="carousel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WEa-uq-6qg"/>
+                        <viewControllerLayoutGuide type="bottom" id="bmm-sd-zzf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CUk-cp-akZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="sign_in_nav_bar" translatesAutoresizingMaskIntoConstraints="NO" id="hha-V4-Xdr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2o-sS-DlZ">
+                                <rect key="frame" x="0.0" y="20" width="80" height="46"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBackButtonPress:" destination="yVx-ke-l3d" eventType="touchUpInside" id="17w-cb-4sh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbq-3N-wY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1423" y="351"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NFN-lF-WZy">
+            <objects>
+                <viewController id="vz3-YD-qOB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ICb-eK-KGc"/>
+                        <viewControllerLayoutGuide type="bottom" id="fwV-dg-vd2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WsW-C8-3IG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ArN-YV-HVq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1423" y="1031"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fhT-zS-afa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="mfd-Vz-pYg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="twt-YF-Hjs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="HFd-sp-u41">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="qjf-bA-E0H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JZB-r4-Ayn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="526" y="351"/>
         </scene>
     </scenes>
     <resources>
@@ -70,5 +164,6 @@
         <image name="intro_tile4" width="76" height="76"/>
         <image name="intro_tile5" width="76" height="75"/>
         <image name="intro_tile6" width="76" height="75"/>
+        <image name="sign_in_nav_bar" width="320" height="66"/>
     </resources>
 </document>
