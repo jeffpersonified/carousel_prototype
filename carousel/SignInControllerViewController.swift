@@ -14,9 +14,9 @@ class SignInControllerViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBAction func onSignInButton(sender: UIButton) {
         
-        var signInAlertView = UIAlertView(title: "Signing In...", message: nil, delegate: nil, cancelButtonTitle: nil)
+        let signInAlertView = UIAlertView(title: "Signing In...", message: nil, delegate: nil, cancelButtonTitle: nil)
         
-        var invalidCredentialsAlertView = UIAlertView(title: "Sign In Failed", message: "Incorrect Email or Password", delegate: nil, cancelButtonTitle: "OK")
+        let invalidCredentialsAlertView = UIAlertView(title: "Sign In Failed", message: "Incorrect Email or Password", delegate: nil, cancelButtonTitle: "OK")
 
         if (self.emailTextField.text == "") || (self.passwordTextField.text == "") {
             invalidCredentialsAlertView.show()
@@ -44,4 +44,3 @@ class SignInControllerViewController: UIViewController {
     }
 
 }
-

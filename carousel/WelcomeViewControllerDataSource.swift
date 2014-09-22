@@ -11,6 +11,7 @@ import UIKit
 
 class WelcomeViewControllerDataSource: NSObject, UIPageViewControllerDataSource {
     let welcomeScreens: NSArray
+    var currentIndex = 0
 
     override init() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -19,16 +20,42 @@ class WelcomeViewControllerDataSource: NSObject, UIPageViewControllerDataSource 
                           storyBoard.viewControllerWithIdentifier("welcome3"),
                           storyBoard.viewControllerWithIdentifier("welcome4")]
         super.init()
+        stylePageControl()
     }
 
+    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return welcomeScreens.count
+    }
+    
+    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return currentIndex
+    }
+    
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        let currentIndex = welcomeScreens.indexOfObject(viewController)
-        return welcomeScreens[currentIndex + 1] as? UIViewController
+        currentIndex = welcomeScreens.indexOfObject(viewController)
+        var destinationIndex = currentIndex + 1
+        
+        if destinationIndex >= welcomeScreens.count {
+            return .None
+        }
+        
+        return welcomeScreens[destinationIndex] as? UIViewController
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        let currentIndex = welcomeScreens.indexOfObject(viewController)
-        return welcomeScreens[currentIndex - 1] as? UIViewController
+        currentIndex = welcomeScreens.indexOfObject(viewController)
+        var destinationIndex = currentIndex - 1
+        
+        if destinationIndex < 0 {
+            return .None
+        }
+        
+        return welcomeScreens[destinationIndex] as? UIViewController
+    }
+    
+    func stylePageControl() {
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.blueColor()
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor.grayColor()
     }
 }
 

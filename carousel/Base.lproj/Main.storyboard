@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361p" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mfd-Vz-pYg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361p" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yVx-ke-l3d">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -144,7 +144,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="AVY-Nb-tht" id="7aC-Pw-QDt"/>
                         <outlet property="passwordTextField" destination="y1F-68-44D" id="QQ0-a7-IaS"/>
-                        <segue destination="7M2-vR-PQL" kind="presentation" modalTransitionStyle="crossDissolve" id="Ocz-QE-rpM"/>
+                        <segue destination="7M2-vR-PQL" kind="presentation" identifier="loginSegue" modalTransitionStyle="crossDissolve" id="Ocz-QE-rpM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kbq-3N-wY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -192,21 +192,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="welcome4" translatesAutoresizingMaskIntoConstraints="NO" id="Wm6-xH-Khl">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="backup_button" translatesAutoresizingMaskIntoConstraints="NO" id="Rpr-76-ZlJ">
-                                <rect key="frame" x="0.0" y="454" width="320" height="97"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3c-rB-VgY">
-                                <rect key="frame" x="23" y="490" width="274" height="61"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="3FM-c7-bJN" kind="presentation" modalTransitionStyle="crossDissolve" id="iq6-o9-x6s"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N9h-v2-Tf0">
+                                <rect key="frame" x="-40" y="-20" width="400" height="614"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="welcome4" translatesAutoresizingMaskIntoConstraints="NO" id="Wm6-xH-Khl">
+                                        <rect key="frame" x="40" y="20" width="320" height="568"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8WD-ZP-Go2">
+                                        <rect key="frame" x="20" y="457" width="360" height="137"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3c-rB-VgY">
+                                                <rect key="frame" x="43" y="47" width="274" height="61"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="3FM-c7-bJN" kind="presentation" modalTransitionStyle="crossDissolve" id="iq6-o9-x6s"/>
+                                                </connections>
+                                            </button>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="backup_button" translatesAutoresizingMaskIntoConstraints="NO" id="Rpr-76-ZlJ">
+                                                <rect key="frame" x="20" y="20" width="320" height="97"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -216,10 +228,10 @@
             </objects>
             <point key="canvasLocation" x="2978" y="711"/>
         </scene>
-        <!--Page View Controller-->
+        <!--Welcome Page View Controller-->
         <scene sceneID="eGP-gZ-8ly">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="7M2-vR-PQL" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="7M2-vR-PQL" customClass="WelcomePageViewController" customModule="carousel" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ga9-Vp-j9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1854" y="1578"/>
