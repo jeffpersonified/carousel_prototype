@@ -144,7 +144,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="AVY-Nb-tht" id="7aC-Pw-QDt"/>
                         <outlet property="passwordTextField" destination="y1F-68-44D" id="QQ0-a7-IaS"/>
-                        <segue destination="BFm-Yc-wbe" kind="presentation" identifier="loginSegue" modalTransitionStyle="crossDissolve" id="6ed-Ep-zJ6"/>
+                        <segue destination="7M2-vR-PQL" kind="presentation" modalTransitionStyle="crossDissolve" id="Ocz-QE-rpM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kbq-3N-wY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -156,35 +156,50 @@
             </objects>
             <point key="canvasLocation" x="1432" y="711"/>
         </scene>
-        <!--Tutorial View Controller-->
-        <scene sceneID="7tH-97-KHI">
+        <!--View Controller-->
+        <scene sceneID="Fw4-1D-TOk">
             <objects>
-                <viewController id="BFm-Yc-wbe" customClass="TutorialViewController" customModule="carousel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcome2" id="BIo-jI-uIA" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tvj-IA-keL"/>
-                        <viewControllerLayoutGuide type="bottom" id="BVB-GH-dts"/>
+                        <viewControllerLayoutGuide type="top" id="wBu-ng-tGN"/>
+                        <viewControllerLayoutGuide type="bottom" id="ush-nZ-3Is"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="RaP-AA-fL6">
-                        <rect key="frame" x="0.0" y="0.0" width="1280" height="568"/>
+                    <view key="view" contentMode="scaleToFill" id="3EQ-3A-zqW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="welcome1" translatesAutoresizingMaskIntoConstraints="NO" id="qbO-4U-rsT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="welcome2" translatesAutoresizingMaskIntoConstraints="NO" id="zsE-fr-9Dp">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="welcome2" translatesAutoresizingMaskIntoConstraints="NO" id="0NV-bd-chs">
-                                <rect key="frame" x="321" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="welcome4" translatesAutoresizingMaskIntoConstraints="NO" id="Pyq-rC-3y3">
-                                <rect key="frame" x="960" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="welcome3" translatesAutoresizingMaskIntoConstraints="NO" id="Wm6-xH-Khl">
-                                <rect key="frame" x="641" y="0.0" width="320" height="568"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TOr-xw-brD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2199" y="711"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="doE-i6-fnG">
+            <objects>
+                <viewController storyboardIdentifier="welcome4" id="xbe-pY-adB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ipq-oh-OyQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="7o3-ki-c10"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yps-XP-DYd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="welcome4" translatesAutoresizingMaskIntoConstraints="NO" id="Wm6-xH-Khl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="backup_button" translatesAutoresizingMaskIntoConstraints="NO" id="Rpr-76-ZlJ">
-                                <rect key="frame" x="960" y="451" width="320" height="97"/>
+                                <rect key="frame" x="0.0" y="454" width="320" height="97"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3c-rB-VgY">
-                                <rect key="frame" x="983" y="490" width="274" height="51"/>
+                                <rect key="frame" x="23" y="490" width="274" height="61"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -195,12 +210,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="1280" height="568"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jkf-NA-3xN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqb-ig-dzd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2301" y="711"/>
+            <point key="canvasLocation" x="2978" y="711"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="eGP-gZ-8ly">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="7M2-vR-PQL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ga9-Vp-j9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1854" y="1578"/>
         </scene>
         <!--Carousel Main View Controller-->
         <scene sceneID="fbG-4j-8Kb">
@@ -224,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5x-Vk-pf2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3182" y="711"/>
+            <point key="canvasLocation" x="3498" y="711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="NFN-lF-WZy">
@@ -266,6 +288,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JZB-r4-Ayn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="526" y="351"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Agk-1F-7gu">
+            <objects>
+                <viewController storyboardIdentifier="welcome1" id="UOk-8m-V2f" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iXC-Tl-Rnr"/>
+                        <viewControllerLayoutGuide type="bottom" id="gBu-ze-iaq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E4q-TB-zGu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="welcome1" translatesAutoresizingMaskIntoConstraints="NO" id="But-VE-Zxc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="veY-oj-fuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="711"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NSL-Yb-Bqc">
+            <objects>
+                <viewController storyboardIdentifier="welcome3" id="9CO-To-0mr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xUR-cO-mfR"/>
+                        <viewControllerLayoutGuide type="bottom" id="NFo-H7-zNm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p5T-V7-ivD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="welcome3" translatesAutoresizingMaskIntoConstraints="NO" id="U5R-0c-HXH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFE-6J-6We" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2571" y="711"/>
         </scene>
     </scenes>
     <resources>

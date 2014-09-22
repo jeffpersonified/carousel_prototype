@@ -17,6 +17,7 @@
 		1FDCC9D119CF9FE700CEDBE1 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCC9D019CF9FE700CEDBE1 /* TutorialViewController.swift */; };
 		1FDCC9D319CFA1F000CEDBE1 /* CarouselMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCC9D219CFA1F000CEDBE1 /* CarouselMainViewController.swift */; };
 		1FDCC9D519D06C4500CEDBE1 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCC9D419D06C4500CEDBE1 /* Global.swift */; };
+		1FDCC9D719D07A2700CEDBE1 /* WelcomeViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCC9D619D07A2700CEDBE1 /* WelcomeViewControllerDataSource.swift */; };
 		1FE4FE9719CAAFD800708904 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4FE9619CAAFD800708904 /* InitialViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		1FDCC9D019CF9FE700CEDBE1 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		1FDCC9D219CFA1F000CEDBE1 /* CarouselMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselMainViewController.swift; sourceTree = "<group>"; };
 		1FDCC9D419D06C4500CEDBE1 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		1FDCC9D619D07A2700CEDBE1 /* WelcomeViewControllerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerDataSource.swift; sourceTree = "<group>"; };
 		1FE4FE9619CAAFD800708904 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 				1F9E1E2D19CA854A00DB754F /* AppDelegate.swift */,
 				1F9E1E2F19CA854A00DB754F /* ViewController.swift */,
 				1F9E1E3119CA854A00DB754F /* Main.storyboard */,
+				1FDCC9D619D07A2700CEDBE1 /* WelcomeViewControllerDataSource.swift */,
 				1FDCC9D419D06C4500CEDBE1 /* Global.swift */,
 				1FDCC9D219CFA1F000CEDBE1 /* CarouselMainViewController.swift */,
 				1FDCC9D019CF9FE700CEDBE1 /* TutorialViewController.swift */,
@@ -233,6 +236,7 @@
 				1FDCC9D119CF9FE700CEDBE1 /* TutorialViewController.swift in Sources */,
 				1FDCC9CF19CF98DF00CEDBE1 /* SignInControllerViewController.swift in Sources */,
 				1F9E1E2E19CA854A00DB754F /* AppDelegate.swift in Sources */,
+				1FDCC9D719D07A2700CEDBE1 /* WelcomeViewControllerDataSource.swift in Sources */,
 				1FDCC9D519D06C4500CEDBE1 /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
