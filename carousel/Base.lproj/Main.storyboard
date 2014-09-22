@@ -111,36 +111,50 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_text" translatesAutoresizingMaskIntoConstraints="NO" id="hCH-qs-2a0">
                                 <rect key="frame" x="0.0" y="74" width="320" height="70"/>
                             </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="sign_in_buttons" translatesAutoresizingMaskIntoConstraints="NO" id="Dqj-08-Aiv">
+                                <rect key="frame" x="0.0" y="456" width="320" height="104"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AVY-Nb-tht">
-                                <rect key="frame" x="21" y="168" width="278" height="39"/>
+                                <rect key="frame" x="21" y="170" width="278" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1F-68-44D">
                                 <rect key="frame" x="21" y="209" width="278" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wa-nb-Zpu">
-                                <rect key="frame" x="21" y="471" width="278" height="47"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wa-nb-Zpu">
+                                <rect key="frame" x="21" y="466" width="278" height="56"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BFm-Yc-wbe" kind="presentation" modalTransitionStyle="crossDissolve" id="FVO-Ph-gIn"/>
+                                    <action selector="onSignInButton:" destination="yVx-ke-l3d" eventType="touchUpInside" id="dih-GO-rDz"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="sign_in_buttons" translatesAutoresizingMaskIntoConstraints="NO" id="Dqj-08-Aiv">
-                                <rect key="frame" x="0.0" y="456" width="320" height="104"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="qJI-M3-Z7s" appends="YES" id="UEQ-wV-Vox"/>
+                        </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="AVY-Nb-tht" id="7aC-Pw-QDt"/>
+                        <outlet property="passwordTextField" destination="y1F-68-44D" id="QQ0-a7-IaS"/>
+                        <segue destination="BFm-Yc-wbe" kind="presentation" identifier="loginSegue" modalTransitionStyle="crossDissolve" id="6ed-Ep-zJ6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kbq-3N-wY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qJI-M3-Z7s">
+                    <connections>
+                        <action selector="onTap:" destination="yVx-ke-l3d" id="2hq-Hz-jWO"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1427" y="711"/>
+            <point key="canvasLocation" x="1432" y="711"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="7tH-97-KHI">
@@ -186,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jkf-NA-3xN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1873" y="711"/>
+            <point key="canvasLocation" x="2301" y="711"/>
         </scene>
         <!--Carousel Main View Controller-->
         <scene sceneID="fbG-4j-8Kb">
@@ -210,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5x-Vk-pf2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2818" y="711"/>
+            <point key="canvasLocation" x="3182" y="711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="NFN-lF-WZy">

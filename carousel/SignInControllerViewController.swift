@@ -10,30 +10,38 @@ import UIKit
 
 class SignInControllerViewController: UIViewController {
 
-    @IBAction func onBackButtonPress(sender: AnyObject) {
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBAction func onSignInButton(sender: UIButton) {
         
-        navigationController?.popViewControllerAnimated(true)
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        var signInAlertView = UIAlertView(title: "Signing In...", message: nil, delegate: nil, cancelButtonTitle: nil)
+        
+        var invalidCredentialsAlertView = UIAlertView(title: "Sign In Failed", message: "Incorrect Email or Password", delegate: nil, cancelButtonTitle: "OK")
 
-        // Do any additional setup after loading the view.
+        if (self.emailTextField.text == "") || (self.passwordTextField.text == "") {
+            invalidCredentialsAlertView.show()
+        } else  {
+            signInAlertView.show()
+            delay(2) {
+                signInAlertView.dismissWithClickedButtonIndex(0, animated: true)
+                if (self.emailTextField.text == "me@example.com") && (self.passwordTextField.text == "123456") {
+                    self.performSegueWithIdentifier("loginSegue", sender: self)
+                } else {
+                    invalidCredentialsAlertView.show()
+                }
+
+            }
+        }
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func onTap(sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func onBackButtonPress(sender: AnyObject) {
+        navigationController?.popViewControllerAnimated(true)
     }
-    */
 
 }
+

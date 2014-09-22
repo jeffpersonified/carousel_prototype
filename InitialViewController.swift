@@ -23,8 +23,7 @@ class InitialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        initialScrollView.contentSize = CGSize(width: 320, height: 1136)
+        initialScrollView.contentSize = introImageView.frame.size
         
         // Transform tiles
         bunnyEarsImageView.transform = CGAffineTransformMakeRotation(-0.20)
