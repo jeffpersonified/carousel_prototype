@@ -41,7 +41,7 @@
                                         <rect key="frame" x="-24" y="437" width="153" height="152"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8K7-DZ-QWH">
-                                        <rect key="frame" x="19" y="1000" width="282" height="60"/>
+                                        <rect key="frame" x="19" y="1063" width="282" height="60"/>
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -50,7 +50,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByW-0Q-Bnt">
-                                        <rect key="frame" x="19" y="1068" width="282" height="48"/>
+                                        <rect key="frame" x="19" y="1007" width="282" height="48"/>
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -105,6 +105,34 @@
                                     <action selector="onBackButtonPress:" destination="yVx-ke-l3d" eventType="touchUpInside" id="17w-cb-4sh"/>
                                 </connections>
                             </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_form" translatesAutoresizingMaskIntoConstraints="NO" id="wtr-YF-CFQ">
+                                <rect key="frame" x="0.0" y="152" width="320" height="113"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="login_text" translatesAutoresizingMaskIntoConstraints="NO" id="hCH-qs-2a0">
+                                <rect key="frame" x="0.0" y="74" width="320" height="70"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AVY-Nb-tht">
+                                <rect key="frame" x="21" y="168" width="278" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1F-68-44D">
+                                <rect key="frame" x="21" y="209" width="278" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wa-nb-Zpu">
+                                <rect key="frame" x="21" y="471" width="278" height="47"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BFm-Yc-wbe" kind="presentation" modalTransitionStyle="crossDissolve" id="FVO-Ph-gIn"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="sign_in_buttons" translatesAutoresizingMaskIntoConstraints="NO" id="Dqj-08-Aiv">
+                                <rect key="frame" x="0.0" y="456" width="320" height="104"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -112,7 +140,77 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kbq-3N-wY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1423" y="351"/>
+            <point key="canvasLocation" x="1427" y="711"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="7tH-97-KHI">
+            <objects>
+                <viewController id="BFm-Yc-wbe" customClass="TutorialViewController" customModule="carousel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tvj-IA-keL"/>
+                        <viewControllerLayoutGuide type="bottom" id="BVB-GH-dts"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RaP-AA-fL6">
+                        <rect key="frame" x="0.0" y="0.0" width="1280" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="welcome1" translatesAutoresizingMaskIntoConstraints="NO" id="qbO-4U-rsT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="welcome2" translatesAutoresizingMaskIntoConstraints="NO" id="0NV-bd-chs">
+                                <rect key="frame" x="321" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="welcome4" translatesAutoresizingMaskIntoConstraints="NO" id="Pyq-rC-3y3">
+                                <rect key="frame" x="960" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="welcome3" translatesAutoresizingMaskIntoConstraints="NO" id="Wm6-xH-Khl">
+                                <rect key="frame" x="641" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="backup_button" translatesAutoresizingMaskIntoConstraints="NO" id="Rpr-76-ZlJ">
+                                <rect key="frame" x="960" y="451" width="320" height="97"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3c-rB-VgY">
+                                <rect key="frame" x="983" y="490" width="274" height="51"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3FM-c7-bJN" kind="presentation" modalTransitionStyle="crossDissolve" id="iq6-o9-x6s"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1280" height="568"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jkf-NA-3xN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1873" y="711"/>
+        </scene>
+        <!--Carousel Main View Controller-->
+        <scene sceneID="fbG-4j-8Kb">
+            <objects>
+                <viewController id="3FM-c7-bJN" customClass="CarouselMainViewController" customModule="carousel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WnO-Cd-bh1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gor-Mo-sO7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NLl-Xu-lkL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="feed" translatesAutoresizingMaskIntoConstraints="NO" id="rXk-mL-5Oi">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1564"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n5x-Vk-pf2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2818" y="711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="NFN-lF-WZy">
@@ -131,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ArN-YV-HVq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1423" y="1031"/>
+            <point key="canvasLocation" x="1427" y="7"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fhT-zS-afa">
@@ -157,6 +255,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backup_button" width="320" height="97"/>
+        <image name="feed" width="320" height="1564"/>
         <image name="intro" width="320" height="1136"/>
         <image name="intro_tile1" width="153" height="152"/>
         <image name="intro_tile2" width="76" height="75"/>
@@ -164,6 +264,13 @@
         <image name="intro_tile4" width="76" height="76"/>
         <image name="intro_tile5" width="76" height="75"/>
         <image name="intro_tile6" width="76" height="75"/>
+        <image name="login_form" width="320" height="113"/>
+        <image name="login_text" width="320" height="70"/>
+        <image name="sign_in_buttons" width="320" height="104"/>
         <image name="sign_in_nav_bar" width="320" height="66"/>
+        <image name="welcome1" width="320" height="568"/>
+        <image name="welcome2" width="320" height="568"/>
+        <image name="welcome3" width="320" height="568"/>
+        <image name="welcome4" width="320" height="568"/>
     </resources>
 </document>
