@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InitialViewController: UIViewController {
+class InitialViewController: UIViewController, UIScrollViewDelegate {
    
     @IBOutlet weak var initialScrollView: UIScrollView!
     @IBOutlet weak var introImageView: UIImageView!
@@ -27,29 +27,31 @@ class InitialViewController: UIViewController {
         
         // Transform tiles
         bunnyEarsImageView.transform = CGAffineTransformMakeRotation(-0.20)
-        lakeImageView.transform = CGAffineTransformMakeRotation(0.25)
-        fishImageView.transform = CGAffineTransformMakeRotation(0.22)
-        cabinImageView.transform = CGAffineTransformMakeRotation(0.23)
-        deerImageView.transform = CGAffineTransformMakeRotation(-0.20)
-        dogImageView.transform = CGAffineTransformMakeRotation(-0.19)
-        
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+//        lakeImageView.transform = CGAffineTransformMakeRotation(0.25)
+//        fishImageView.transform = CGAffineTransformMakeRotation(0.22)
+//        cabinImageView.transform = CGAffineTransformMakeRotation(0.23)
+//        deerImageView.transform = CGAffineTransformMakeRotation(-0.20)
+//        dogImageView.transform = CGAffineTransformMakeRotation(-0.19)
     }
     
+    func scrollViewDidScroll(initialScrollView: UIScrollView) {
+        var percentage = 0.0
+        var offset = initialScrollView.contentOffset.y / 568
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if offset >= 1 {
+            percentage = 1.0
+        } else if offset <= 0 {
+            percentage = 0.0
+        } else {
+            percentage = Double(offset)
+        }
+        
+        
+        bunnyEarsImageView.transform = CGAffineTransformMakeTranslation(0, CGFloat(percentage * 400))
+//        bunnyEarsImageView.transform = CGAffineTransformRotation(CGFloat(percentage * 400))
+        bunnyEarsImageView.transform = CGAffineTransformRotate(bunnyEarsImageView.transform, CGFloat(percentage * -0.20))
+            
+        println(percentage)
     }
-    */
 
 }

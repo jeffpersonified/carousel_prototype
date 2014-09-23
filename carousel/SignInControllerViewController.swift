@@ -12,6 +12,13 @@ class SignInControllerViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    
     @IBAction func onSignInButton(sender: UIButton) {
         
         let signInAlertView = UIAlertView(title: "Signing In...", message: nil, delegate: nil, cancelButtonTitle: nil)
@@ -42,5 +49,5 @@ class SignInControllerViewController: UIViewController {
     @IBAction func onBackButtonPress(sender: AnyObject) {
         navigationController?.popViewControllerAnimated(true)
     }
-
+    
 }
