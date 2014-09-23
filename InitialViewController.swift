@@ -24,9 +24,10 @@ class InitialViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialScrollView.contentSize = introImageView.frame.size
+        setInitialPositions()
         
         // Transform tiles
-        bunnyEarsImageView.transform = CGAffineTransformMakeRotation(-0.20)
+//            bunnyEarsImageView.transform = CGAffineTransformMakeRotation(-0.20)
 //        lakeImageView.transform = CGAffineTransformMakeRotation(0.25)
 //        fishImageView.transform = CGAffineTransformMakeRotation(0.22)
 //        cabinImageView.transform = CGAffineTransformMakeRotation(0.23)
@@ -39,19 +40,62 @@ class InitialViewController: UIViewController, UIScrollViewDelegate {
         var offset = initialScrollView.contentOffset.y / 568
 
         if offset >= 1 {
-            percentage = 1.0
+            percentage = -0.0
         } else if offset <= 0 {
-            percentage = 0.0
+            percentage = -1.0
         } else {
-            percentage = Double(offset)
+            percentage = Double(offset - 1)
         }
         
+        setBunnyEarsImagePosition(percentage)
+        setLakeImagePosition(percentage)
+        setFishImagePosition(percentage)
+        setCabinImagePosition(percentage)
+        setDeerImagePosition(percentage)
+        setDogImagePosition(percentage)
+
+    }
+    
+    func setInitialPositions() {
+        let percentage = -1.0
         
-        bunnyEarsImageView.transform = CGAffineTransformMakeTranslation(0, CGFloat(percentage * 400))
-//        bunnyEarsImageView.transform = CGAffineTransformRotation(CGFloat(percentage * 400))
-        bunnyEarsImageView.transform = CGAffineTransformRotate(bunnyEarsImageView.transform, CGFloat(percentage * -0.20))
-            
-        println(percentage)
+        setBunnyEarsImagePosition(percentage)
+        setLakeImagePosition(percentage)
+        setFishImagePosition(percentage)
+        setCabinImagePosition(percentage)
+        setDeerImagePosition(percentage)
+        setDogImagePosition(percentage)
+        
+    }
+    
+    func setBunnyEarsImagePosition(percentage: Double) {
+        bunnyEarsImageView.transform = CGAffineTransformMakeTranslation(CGFloat(percentage * 30), CGFloat(percentage * 400))
+        bunnyEarsImageView.transform = CGAffineTransformRotate(bunnyEarsImageView.transform, CGFloat(percentage * 0.20))
     }
 
+    func setLakeImagePosition(percentage: Double) {
+        lakeImageView.transform = CGAffineTransformMakeTranslation(CGFloat(percentage * 30), CGFloat(percentage * 400))
+        lakeImageView.transform = CGAffineTransformRotate(lakeImageView.transform, CGFloat(percentage * -0.20))
+    }
+
+    func setFishImagePosition(percentage: Double) {
+        fishImageView.transform = CGAffineTransformMakeTranslation(CGFloat(percentage * 20), CGFloat(percentage * 400))
+        fishImageView.transform = CGAffineTransformRotate(fishImageView.transform, CGFloat(percentage * -0.20))
+    }
+    
+    func setCabinImagePosition(percentage: Double) {
+        cabinImageView.transform = CGAffineTransformMakeTranslation(CGFloat(percentage * 35), CGFloat(percentage * 400))
+        cabinImageView.transform = CGAffineTransformRotate(cabinImageView.transform, CGFloat(percentage * 0.15))
+    }
+
+    func setDeerImagePosition(percentage: Double) {
+        deerImageView.transform = CGAffineTransformMakeTranslation(CGFloat(percentage * -30), CGFloat(percentage * 400))
+        deerImageView.transform = CGAffineTransformRotate(deerImageView.transform, CGFloat(percentage * -0.20))
+    }
+    
+    func setDogImagePosition(percentage: Double) {
+        dogImageView.transform = CGAffineTransformMakeTranslation(CGFloat(percentage * -35), CGFloat(percentage * 400))
+        dogImageView.transform = CGAffineTransformRotate(dogImageView.transform, CGFloat(percentage * 0.20))
+    }
+    
 }
