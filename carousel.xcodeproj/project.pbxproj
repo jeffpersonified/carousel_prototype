@@ -21,6 +21,7 @@
 		1FDCC9D919D08F6300CEDBE1 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCC9D819D08F6300CEDBE1 /* WelcomePageViewController.swift */; };
 		1FDCC9DF19D1CA5900CEDBE1 /* ImageTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCC9DE19D1CA5900CEDBE1 /* ImageTimelineViewController.swift */; };
 		1FDCC9E119D1CE2B00CEDBE1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCC9E019D1CE2B00CEDBE1 /* SettingsViewController.swift */; };
+		1FDCC9E319D1E68D00CEDBE1 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCC9E219D1E68D00CEDBE1 /* ConversationsViewController.swift */; };
 		1FE4FE9719CAAFD800708904 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4FE9619CAAFD800708904 /* InitialViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		1FDCC9D819D08F6300CEDBE1 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
 		1FDCC9DE19D1CA5900CEDBE1 /* ImageTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTimelineViewController.swift; sourceTree = "<group>"; };
 		1FDCC9E019D1CE2B00CEDBE1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1FDCC9E219D1E68D00CEDBE1 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 		1FE4FE9619CAAFD800708904 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 				1F9E1E2D19CA854A00DB754F /* AppDelegate.swift */,
 				1F9E1E2F19CA854A00DB754F /* ViewController.swift */,
 				1F9E1E3119CA854A00DB754F /* Main.storyboard */,
+				1FDCC9E219D1E68D00CEDBE1 /* ConversationsViewController.swift */,
 				1FDCC9E019D1CE2B00CEDBE1 /* SettingsViewController.swift */,
 				1FDCC9DE19D1CA5900CEDBE1 /* ImageTimelineViewController.swift */,
 				1FDCC9D819D08F6300CEDBE1 /* WelcomePageViewController.swift */,
@@ -242,6 +245,7 @@
 				1FE4FE9719CAAFD800708904 /* InitialViewController.swift in Sources */,
 				1F9E1E3019CA854A00DB754F /* ViewController.swift in Sources */,
 				1FDCC9E119D1CE2B00CEDBE1 /* SettingsViewController.swift in Sources */,
+				1FDCC9E319D1E68D00CEDBE1 /* ConversationsViewController.swift in Sources */,
 				1FDCC9D319CFA1F000CEDBE1 /* CarouselMainViewController.swift in Sources */,
 				1FDCC9D119CF9FE700CEDBE1 /* TutorialViewController.swift in Sources */,
 				1FDCC9D919D08F6300CEDBE1 /* WelcomePageViewController.swift in Sources */,
