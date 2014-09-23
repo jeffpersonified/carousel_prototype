@@ -23,12 +23,6 @@ class TutorialViewController: UIViewController {
         
     }
     
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     func scrollViewDidEndDecelerating(tutorialScrollView: UIScrollView!) {
         // Get the current page based on the scroll offset
         var page : Int = Int(round(tutorialScrollView.contentOffset.x / 320))
