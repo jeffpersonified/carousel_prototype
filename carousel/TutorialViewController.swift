@@ -8,28 +8,36 @@
 
 import UIKit
 
-class TutorialViewController: UIViewController {
+class TutorialViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var tutorialScrollView: UIScrollView!
     @IBOutlet weak var firstWelcomeImageView: UIImageView!
     @IBOutlet var tutorialSwipeGestureRecognizer: UISwipeGestureRecognizer!
+    @IBOutlet weak var controlsView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tutorialScrollView.contentSize.width = firstWelcomeImageView.frame.size.width * 4
-        
-        
+
     }
     
     func scrollViewDidEndDecelerating(tutorialScrollView: UIScrollView!) {
         // Get the current page based on the scroll offset
-        var page : Int = Int(round(tutorialScrollView.contentOffset.x / 320))
+        var page = Int(round(tutorialScrollView.contentOffset.x / 320))
         
         // Set the current page, so the dots will update
         pageControl.currentPage = page
-        println(pageControl.currentPage)
+        if page == 3 {
+            UIView.animateWithDuration(0.3) {
+                self.controlsView.alpha = 1
+            }
+        } else {
+            UIView.animateWithDuration(0.3) {
+                self.controlsView.alpha = 0
+            }
+        }
     }
 
 }
